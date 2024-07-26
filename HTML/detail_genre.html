@@ -1,0 +1,83 @@
+<!-- detail_genre.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/detail_genres.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="icon" href="../image/icon.png">
+    <title>SoundSphere</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../HTML/home.html">
+                <h1>Sound<span>Sphere</span></h1>
+            </a>
+        </div>
+        <div class="search-theme">
+            <form id="search" action="../HTML/search.html" class="search">
+                <input type="text" name="keyword" id="keyword" placeholder="Search for songs...">
+                <button type="submit" id="submit"><i class="bx bx-search"></i></button>
+            </form>
+            <i class='bx bxs-sun' id="mode"></i>
+        </div>
+    </header>
+
+    <main>
+        <div id="genre-detail" class="genre-detail">
+            <div id="tracks-list" class="tracks-list">
+            </div>
+            <div class="contener-playing" id="contener-playing">
+                <div class="playing-song">
+                    <img src="" alt="" class="playing-img">
+                    <div class="playing-info">
+                        <h1 id="playing-title" class="title"></h1>
+                        <p id="playing-artist" class="artist"></p>
+                    </div>
+                </div>
+                <div class="controls">
+                    <i class='bx bx-skip-previous' id="prev-btn"></i>
+                    <i class='bx bx-play' id="play-btn"></i>
+                    <i class='bx bx-skip-next' id="next-btn"></i>
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="current-time" class="current-time">0:00</span> / <span id="duration" class="duration">0:00</span>
+                    </div>
+                </div>            
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="#">
+                <i class='bx bxl-twitter'></i>
+            </a>
+            <a href="#">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="#">
+                <i class='bx bxl-youtube'></i>
+            </a>
+        </div>
+        <p>&copy; 2024 SoundSphere. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="../JS/mode.js"></script>
+    <script type="module" src="../JS/detail_gendre.js"></script>
+</body>
+
+</html>

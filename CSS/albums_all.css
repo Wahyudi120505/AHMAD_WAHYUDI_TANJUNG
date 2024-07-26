@@ -1,0 +1,111 @@
+.container-all {
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    background-color: #222;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.all {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+figure.album {
+    margin: 10px;
+    flex-basis: calc(20% - 20px); /* Menggunakan 20% untuk menampilkan lebih banyak album */
+    padding: 10px;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center; 
+    background-color: #333;
+}
+
+.album img {
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.album img:hover {
+    transform: scale(1.05);
+}
+
+.album figcaption {
+    margin-top: 10px;
+    font-size: 16px;
+    word-wrap: break-word;
+}
+
+.album button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    color: white;
+}
+
+.album .play-icon, .album .pause-icon {
+    font-size: 24px;
+}
+
+.album .play-icon.show {
+    display: inline;
+}
+
+.album .pause-icon {
+    display: none;
+}
+
+.album.playing .play-icon {
+    display: none;
+}
+
+.album.playing .pause-icon {
+    display: inline;
+}
+
+/* Laptop */
+@media screen and (max-width: 1113px) {
+    figure.album {
+        flex-basis: calc(25% - 20px); /* Menggunakan 25% untuk layar laptop */
+    }
+}
+
+/* Tablet L&M */
+@media screen and (max-width: 886px) {
+    figure.album {
+        flex-basis: calc(33.33% - 20px); /* Menggunakan 33.33% untuk layar tablet L dan M */
+    }
+
+    .album figcaption {
+        font-size: 14px; /* Mengubah ukuran font untuk layar yang lebih kecil */
+    }
+}
+
+/* Tablet S */
+@media screen and (max-width: 600px) {
+    figure.album {
+        flex-basis: calc(50% - 20px); /* Menggunakan 50% untuk layar tablet S */
+    }
+
+    .album figcaption {
+        font-size: 13px; /* Mengubah ukuran font lebih lanjut untuk layar yang lebih kecil */
+    }
+}
+
+/* Mobile L-M-S */
+@media screen and (max-width: 500px) {
+    figure.album {
+        flex-basis: calc(100% - 20px); /* Menggunakan 100% untuk layar mobile */
+    }
+
+    .album figcaption {
+        font-size: 12px; /*Mengubah ukuran font lebih lanjut untuk layar yang lebih kecil */
+    }
+}

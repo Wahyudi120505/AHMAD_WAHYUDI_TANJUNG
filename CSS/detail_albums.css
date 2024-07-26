@@ -1,0 +1,68 @@
+.album {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.album button {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: white;
+    background: transparent;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.album:hover img, .album.playing img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.album:hover button, .album.playing button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.album figcaption {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.album:hover figcaption, .album.playing figcaption {
+    opacity: 1;
+}
+
+.play-icon, .pause-icon {
+    display: none;
+}
+
+.play-icon.show, .pause-icon.show {
+    display: inline;
+}
+
+.album-artist {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.album-artist.playing img, .album-artist:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.album-artist figcaption {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.album-artist.playing figcaption, .album-artist:hover figcaption {
+    opacity: 1;
+}

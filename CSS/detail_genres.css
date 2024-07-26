@@ -1,0 +1,220 @@
+.genre-detail {
+    border: 1px solid #333;
+    height: 75.4vh;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px;
+    background-color: #292929;
+    border-radius: 10px;
+    overflow: hidden; /* Menyembunyikan scrollbar luar kontainer */
+    display: flex;
+}
+
+.tracks-list {
+    width: 80%;
+    overflow-y: scroll; /* Ganti overflow-y untuk scroll */
+    height: calc(100% - 5px); /* Sesuaikan tinggi elemen recommendations */
+    padding: 10px;
+    margin-right: 20px;
+    scrollbar-width: thin; /* Untuk Firefox */
+    scrollbar-color: #555 #222; /* Warna thumb scrollbar dan Warna track scrollbar */
+}
+
+.tracks-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tracks-list::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px; 
+}
+
+.tracks-list::-webkit-scrollbar-track {
+    background-color: #222;
+    border-radius: 10px; 
+}
+
+.track {
+    border-bottom: 1px solid #444;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    color: #fff;
+}
+
+.track:hover {
+    background-color: #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.album-image {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 5px;
+    object-fit: cover; 
+    margin-right: 15px; 
+}
+
+figcaption {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.track .captions {
+    flex: 1;
+}
+
+.track .title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.track .artist {
+    font-size: 13px;
+    color: #aaa;
+    margin: 5px 0;
+}
+
+.contener-playing {
+    text-align: center;
+    margin: 5px auto;
+    width: 30%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #333;
+}
+
+.playing-img {
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+.playing-song .title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.playing-song .artist {
+    font-size: 1em;
+    color: #aaa;
+    margin: 5px 0;
+}
+
+.playing-info {
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+
+i.bx {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    position: relative;
+    width: 300px;
+    height: 10px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #ff6600;
+    width: 0%;
+}
+
+.time-display {
+    display: flex;
+    align-items: center;
+}
+
+.current-time, .duration {
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+/* Responsive */
+
+/* Laptop */
+@media screen and (max-width: 1113px) {
+    .track .captions {
+        display: none;
+    }
+
+    .track {
+        background-color: transparent;
+        justify-content: center;
+    }
+
+    .track:hover {
+        background-color: transparent;
+    }
+
+    .tracks-list {
+        width: 75%;
+    }
+
+    .playing-img {
+        width: 70%;
+    }    
+
+    .contener-playing {
+        width: 40%;
+        font-size: 0.9em;
+    }
+
+    .progress {
+        display: none;
+    }
+
+    .progress-bar {
+        display: none;
+    }
+
+
+}
+
+/* Tablet L&M */
+@media screen and (max-width: 886px) {
+    .tracks-list {
+        width: 70%;
+    }
+    .contener-playing {
+        width: 50%;
+    }
+}
+
+/* Tablet S */
+@media screen and (max-width: 600px) {
+    .tracks-list {
+        width: 65%;
+    }
+    .contener-playing {
+        width: 60%;
+    }
+}
+
+/* Mobile L-M-S */
+@media screen and (max-width: 500px) {
+    .tracks-list {
+        width: 60%;
+    }
+    .contener-playing {
+        width: 70%;
+    }
+}

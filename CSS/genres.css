@@ -1,0 +1,110 @@
+.aside-right {
+    border: 1px solid #333;
+    height: 75.4vh;
+    width: 25%;
+    padding: 0;
+    background-color: #292929;
+    border-radius: 10px;
+    overflow: hidden; /* Menyembunyikan scrollbar luar kontainer */
+}
+
+.aside-right h1 {
+    text-align: center;
+    font-size: 25px;
+    margin: 10px;
+    color: #fff;
+}
+
+.aside-right .genres-list {
+    border-top: 1px solid #444;
+    overflow-y: scroll; /* Ganti overflow-y untuk scroll */
+    height: 71.5vh;
+    padding: 10px;
+    scrollbar-width: thin; /* Untuk Firefox */
+    scrollbar-color: #555 #222; /* Warna thumb scrollbar dan Warna track scrollbar */
+}
+
+.genres-list .genre {
+    background-color: #333;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.genres-list .genre:hover {
+    background-color: #555;
+    cursor: pointer;
+}
+
+.aside-right .genres-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.aside-right .genres-list::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.aside-right .genres-list::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 10px;
+    border: 2px solid #222;
+}
+
+
+/* responsive.css */
+
+/* Laptop */
+@media screen and (max-width: 1115px) {
+    .genres-list .genre {
+        font-size: 16px; /* Mengatur ukuran font untuk genre */
+    }
+    .aside-right {
+        height: 73.5vh; /* Mengatur tinggi aside kanan */
+    }
+}
+
+/* Tablet L&M */
+@media screen and (max-width: 800px) {
+    .aside-right {
+        width: 25%; /* Memperluas lebar aside kanan ke 100% */
+        /* height: 73.5vh; Mengatur tinggi aside kanan secara otomatis */
+    }
+    .aside-right h1 {
+        font-size: 20px; /* Mengurangi ukuran font untuk header aside kanan */
+    }
+    .aside-right .genres-list {
+        height: auto; /* Mengatur tinggi genres-list secara otomatis */
+        max-height: 100%; /* Menentukan tinggi maksimal genres-list */
+    }
+    .genres-list .genre {
+        font-size: 16px; /* Mengatur ukuran font untuk genre */
+        padding: 8px; /* Menambahkan padding untuk genre */
+    }
+}
+
+/* Tablet S */
+@media screen and (max-width: 600px) {
+    .aside-right h1 {
+        font-size: 18px; /* Mengurangi ukuran font header lebih lanjut untuk layar kecil */
+    }
+    .genres-list .genre {
+        font-size: 14px; /* Mengurangi ukuran font untuk genre */
+        padding: 6px; /* Mengurangi padding untuk genre */
+    }
+}
+
+/* Mobile L-M-S */
+@media screen and (max-width: 500px) {
+    .aside-right h1 {
+        font-size: 16px; /* Mengurangi ukuran font header lebih lanjut untuk layar mobile */
+    }
+    .genres-list .genre {
+        font-size: 7px; /* Mengurangi ukuran font untuk genre */
+        padding: 4px; /* Mengurangi padding untuk genre */
+        background-color: transparent;
+        border-bottom:1px solid #fff     ;
+    }
+}

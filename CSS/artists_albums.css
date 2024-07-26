@@ -1,0 +1,161 @@
+.content-aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+    border-bottom: 1px solid #444;
+}
+
+.content-aside h1 {
+    font-size: 25px;
+    color: #fff;
+    margin: 0;
+}
+
+.show-all-artists, .show-all-albums {
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    background-color: #444;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.show-all-artists:hover, .show-all-albums:hover {
+    background-color: #666;
+}
+
+.artist-content, .albums-content {
+    padding: 19.5px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: #292929;
+    width: 100%;
+}
+
+.artist-content .artist-list, .albums-content .albums-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.artist, .album {
+    display: inline-block;
+    margin: 22px 10px 0px 10px;
+    text-align: center;
+    position: relative;
+}
+
+.artist img, .album img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s;
+}
+
+.artist figcaption, .album figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.artist:hover img, .album:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.artist:hover figcaption, .album:hover figcaption {
+    opacity: 1;
+}
+
+/* Responsif untuk layar dengan lebar hingga 1115px */
+@media screen and (max-width: 1115px) {
+    body main {
+        height: 100% 
+    }
+
+    .artist, .album {
+        justify-content: center; /* Menyusun album secara horizontal di tengah */
+    }
+
+    .artist img, .album img {
+        width: 55px; /* Mengubah ukuran gambar untuk tampilan lebih kecil */
+        height: 50px;
+    }
+
+    .artist figcaption, .album figcaption {
+        font-size: 12px; /* Mengubah ukuran font untuk tampilan lebih kecil */
+    }
+
+    .artist-content, .albums-content {
+        padding: 2px; /* Mengubah padding untuk tampilan lebih kecil */
+        height: 35.4vh; /* Menyesuaikan tinggi konten untuk tampilan lebih kecil */
+    }
+
+
+}
+
+/* Responsif untuk layar dengan lebar hingga 768px */
+@media (max-width: 800px) {
+
+    .content-aside {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-aside h1 {
+        font-size: 20px; /* Mengubah ukuran font untuk header */
+    }
+
+    .show-all-artists, .show-all-albums {
+        width: 100%; /* Memperlebar tombol untuk mengisi lebar layar */
+        margin-top: 10px; /* Menambahkan margin atas */
+    }
+
+    .artist-content, .albums-content {
+        padding: 10px; /* Menambahkan padding */
+        margin-bottom: 20px; /* Menambahkan margin bawah */
+        overflow-y: auto; /* Menambahkan scroll vertikal jika konten melebihi tinggi */
+    }
+
+    .artist, .album {
+        width: 100%; /* Mengatur lebar album menjadi 100% */
+        margin: 10px 0; /* Menambahkan margin atas dan bawah */
+    }
+
+    .artist img, .album img {
+        width: 80px; /* Mengubah ukuran gambar untuk tampilan lebih kecil */
+        height: 80px;
+    }
+
+    .artist figcaption, .album figcaption {
+        font-size: 12px; /* Mengubah ukuran font untuk tampilan lebih kecil */
+    }
+}
+
+/* Responsif untuk layar dengan lebar hingga 600px (Tablet S) */
+@media (max-width: 800px) {
+    .artist img, .album img {
+        width: 70px; /* Mengubah ukuran gambar untuk tablet ukuran kecil */
+        height: 70px;
+    }
+
+    .artist figcaption, .album figcaption {
+        font-size: 11px; /* Mengubah ukuran font lebih lanjut untuk tablet ukuran kecil */
+    }
+}
+
+/* Responsif untuk layar dengan lebar hingga 500px (Mobile L-M-S) */
+@media (max-width: 500px) {
+    .artist img, .album img {
+        width: 60px; /* Mengubah ukuran gambar untuk layar mobile */
+        height: 60px;
+    }
+
+    .artist figcaption, .album figcaption {
+        font-size: 10px; /* Mengubah ukuran font lebih lanjut untuk layar mobile */
+    }
+}

@@ -1,0 +1,182 @@
+.album-details {
+    width: 100%; 
+    margin-bottom: 10px; 
+    padding: 20px; 
+    border: 1px solid #333; 
+    border-radius: 10px; 
+    background-color: #1e1e1e; 
+    color: white; 
+}
+
+.album-figure {
+    display: flex; 
+    border-bottom: 1px solid #333; 
+}
+
+.album-photo {
+    width: 150px;
+    height: 150px; 
+    border-radius: 10px; 
+    overflow: hidden; /* Mengatur overflow foto agar tidak melewati batas */
+    margin-bottom: 20px; 
+    margin-right: 20px; 
+}
+
+.album-artists {
+    font-size: 15px; 
+    color: #aaa;
+}
+
+.container-play {
+    display: flex; 
+    align-items: center; 
+    margin-top: 20px; 
+}
+
+.icon {
+    margin-right: 10px; 
+    color: white; 
+    cursor: pointer; 
+}
+
+.icon:hover {
+    color: #ff6600; 
+}
+
+.container-duration {
+    position: relative; /* Posisi relatif untuk menempatkan bar durasi di bawah */
+    width: 100%; 
+    height: 5px; 
+    margin-top: 0px; 
+}
+
+.duration-background {
+    background-color: #555; /* Warna latar belakang bar durasi */
+    height: 100%;
+    width: 100%;
+}
+
+.duration-bar {
+    background-color: #ff6600; /* Warna bar durasi */
+    height: 100%;
+    width: 0; /* Awalnya bar durasi tidak terlihat */
+    transition: width 0.1s linear; /* Animasi saat lebar bar berubah */
+    position: relative;
+    top: -5px;
+}
+
+.duration {
+    margin-left: 10px; /* Jarak kiri untuk teks durasi */
+}
+
+.track-container {
+    overflow-y: scroll; /* Mengaktifkan scroll vertikal */
+    height: 292.5px; 
+    scrollbar-width: thin; /* Untuk Firefox: lebar scrollbar */
+    scrollbar-color: #888 #1e1e1e; /* Warna thumb scrollbar dan Warna track scrollbar */
+}
+
+.track-container::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar */
+}
+
+.track-container::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Warna latar belakang track scrollbar */
+    border-radius: 10px; /* Sudut bulat pada track scrollbar */
+}
+
+.track-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Warna thumb scrollbar */
+    border-radius: 10px; /* Sudut bulat pada thumb scrollbar */
+    border: 2px solid #1e1e1e; /* Border thumb scrollbar */
+}
+
+.track {
+    display: flex; /* Menampilkan elemen dalam flexbox */
+    align-items: center; /* Mengatur posisi vertikal elemen */
+    padding: 10px; /* Padding dalam elemen */
+    border-bottom: 1px solid #333; /* Garis bawah dengan warna abu-abu gelap */
+}
+
+.track:last-child {
+    border-bottom: none; /* Menghapus garis bawah pada elemen terakhir */
+}
+
+.track p {
+    flex: 1; /* Mengisi ruang tersisa dengan judul lagu */
+    font-size: 1.2em; 
+    margin: 5px 0;
+    cursor: pointer;
+    transition: color 0.3s ease, font-weight 0.3s ease; /* Transisi warna dan ketebalan font */
+}
+
+.playing {
+    color: #ff6600; 
+    font-weight: bold; 
+}
+
+.track:hover {
+    background-color: #292929; 
+}
+
+/* Responsive */
+
+/* Laptop */
+@media screen and (max-width: 1113px) {
+    .album-figure {
+        margin-bottom: 5px;
+    }
+    .album-photo {
+        width: 130px; /* Mengurangi ukuran foto untuk layar laptop */
+        height: 130px;
+    }
+    .album-figcaption {
+        margin-top: -10px;
+        font-size: 12px; /* Mengurangi ukuran font teks judul album */
+    }
+    .container-duration {
+        width: 80%; /* Mengurangi lebar bar durasi */
+    }
+}
+
+/* Tablet L&M */
+@media screen and (max-width: 886px) {
+    .album-photo {
+        width: 100px; /* Mengurangi ukuran foto lebih lanjut untuk layar tablet L dan M */
+        height: 100px;
+    }
+    .container-play {
+        margin-top: 10px; /* Mengurangi margin atas */
+    }
+    .container-duration {
+        width: 70%; /* Mengurangi lebar bar durasi lebih lanjut */
+    }
+}
+
+/* Tablet S */
+@media screen and (max-width: 600px) {
+    .album-photo {
+        width: 80px; /* Mengurangi ukuran foto lebih lanjut untuk layar tablet S */
+        height: 80px;
+    }
+    .container-play {
+        margin-top: 5px; /* Mengurangi margin atas */
+    }
+    .container-duration {
+        width: 60%; /* Mengurangi lebar bar durasi lebih lanjut */
+    }
+}
+
+/* Mobile L-M-S */
+@media screen and (max-width: 500px) {
+    .album-photo {
+        width: 60px; /* Mengurangi ukuran foto lebih lanjut untuk layar mobile */
+        height: 60px;
+    }
+    .container-play {
+        margin-top: 0; /* Menghilangkan margin atas */
+    }
+    .container-duration {
+        width: 50%; /* Mengurangi lebar bar durasi lebih lanjut */
+    }
+}

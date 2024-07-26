@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/req.css">
+    <link rel="stylesheet" href="../CSS/artists_albums.css">
+    <link rel="stylesheet" href="../CSS/genres.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/detail_albums.css">
+    <link rel="icon" href="../image/icon.png">
+    <title>SoundSphere</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="../HTML/index.html"><h1>Sound<span>Sphere</span></h1></a> 
+        </div>
+        <div class="search-theme">
+            <form id="search" action="../HTML/search.html" class="search">
+                <input type="text" name="keyword" id="keyword" placeholder="Search for songs...">
+                <button type="submit" id="submit"><i class="bx bx-search"></i></button>
+            </form>
+            <i class='bx bxs-sun' id="mode"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-req">
+            <h1>Recommendations</h1>
+            <div class="recommendations" id="recommendations">
+
+            </div>
+        </div>
+
+        <div class="aside-center">
+            <div class="artist-content">
+                <div class="content-aside">
+                    <h1>Popular Artists</h1>
+                    <button id="show-all-artists" class="show-all-artists">Show all</button>
+                </div>
+                <div id="artist-list" class="artist-list"></div>
+            </div>
+
+            <div class="albums-content">
+                <div class="content-aside">
+                    <h1>Albums Pop</h1>
+                    <button id="show-all-albums" class="show-all-albums">Show all</button>
+                </div>
+                <div id="albums-list" class="albums-list"></div>
+            </div>
+        </div>
+
+        <div class="aside-right">
+            <h1>Genres Music</h1>
+            <div class="genres-list" id="genres-list">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="#">
+                <i class='bx bxl-twitter'></i>
+            </a>
+            <a href="#">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="#">
+                <i class='bx bxl-youtube'></i>
+            </a>
+        </div>
+        <p>&copy; 2024 SoundSphere. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="../JS/mode.js"></script>
+    <script type="module" src="../JS/req.js"></script>
+    <script type="module" src="../JS/artist.js"></script>
+    <script type="module" src="../JS/albums.js"></script>
+    <script type="module" src="../JS/genres.js"></script>
+</body>
+
+</html>
